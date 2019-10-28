@@ -25,6 +25,12 @@ import org.json.simple.parser.ParseException;
 public class JSONReader {
     
     private String rutaArchivo;
+
+    public JSONReader(String rutaArchivo) {
+        this.rutaArchivo = rutaArchivo;
+    }
+    
+    
     
     public JSONData convertJSonToData(){
         ArrayList<String> listaLinks = new ArrayList<>();
@@ -35,7 +41,7 @@ public class JSONReader {
         JSONParser parser = new JSONParser();
 
         try {
-            Object obj = parser.parse(new FileReader("C:\\Users\\Ronny\\OneDrive\\Documentos\\NetBeansProjects\\Caso_11\\Data_Structures_Case_11\\src\\jsonFile\\test.json"));
+            Object obj = parser.parse(new FileReader(rutaArchivo));
 
             JSONObject jsonObject = (JSONObject) obj;
                 
