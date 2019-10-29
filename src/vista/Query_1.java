@@ -35,6 +35,7 @@ public class Query_1 extends javax.swing.JFrame {
         btn_buscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         lbl_palabraABuscar.setText("Palabra a buscar: ");
 

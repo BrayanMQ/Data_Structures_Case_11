@@ -35,6 +35,7 @@ public class Query_3 extends javax.swing.JFrame {
         btn_buscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         list_top.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Top 1", "Top 2", "Top 3", "Top 4", "Top 5" };

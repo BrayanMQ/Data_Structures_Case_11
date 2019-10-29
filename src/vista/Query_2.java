@@ -38,6 +38,7 @@ public class Query_2 extends javax.swing.JFrame {
         btn_buscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         lbl_links.setText("Links: ");
 

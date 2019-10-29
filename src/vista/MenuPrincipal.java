@@ -32,6 +32,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btn_topDePalabras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         btn_buscarPalabra.setText("Buscar palabra");
         btn_buscarPalabra.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +76,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(btn_palabrasRepetidas)
                 .addGap(18, 18, 18)
                 .addComponent(btn_topDePalabras)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

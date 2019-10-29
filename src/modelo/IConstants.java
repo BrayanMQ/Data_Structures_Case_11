@@ -5,10 +5,18 @@
  */
 package modelo;
 
+import java.util.regex.Pattern;
+
 /**
  *
  * @author dark1
  */
 public interface IConstants {
-    
+    public static String PATH_FILE = "src\\jsonFile\\links.json";
+    public static Pattern PATRON_PALABRAS = Pattern.compile("[a-zA-Z]{4,}");
+    public static Pattern PATRON_LINKS = Pattern.compile("^https://.*");
+    public static String TAG_LINEAS = "p";
+    public static String ESPACIO = " ";
+    public static String TAG_HIPERVINCULO = "a";
+    public static String TAG_LINK = "href";
 }
