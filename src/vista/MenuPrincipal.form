@@ -53,16 +53,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar palabra"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_buscarPalabraActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_palabrasRepetidas">
       <Properties>
         <Property name="text" type="java.lang.String" value="Palabras repetidas"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_palabrasRepetidasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_topDePalabras">
       <Properties>
         <Property name="text" type="java.lang.String" value="Top de palabras"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_topDePalabrasActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

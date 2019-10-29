@@ -34,10 +34,25 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btn_buscarPalabra.setText("Buscar palabra");
+        btn_buscarPalabra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarPalabraActionPerformed(evt);
+            }
+        });
 
         btn_palabrasRepetidas.setText("Palabras repetidas");
+        btn_palabrasRepetidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_palabrasRepetidasActionPerformed(evt);
+            }
+        });
 
         btn_topDePalabras.setText("Top de palabras");
+        btn_topDePalabras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_topDePalabrasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,6 +80,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_buscarPalabraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarPalabraActionPerformed
+       new Query_1().setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_btn_buscarPalabraActionPerformed
+
+    private void btn_palabrasRepetidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_palabrasRepetidasActionPerformed
+       new Query_2().setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_btn_palabrasRepetidasActionPerformed
+
+    private void btn_topDePalabrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_topDePalabrasActionPerformed
+       new Query_3().setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_btn_topDePalabrasActionPerformed
 
     /**
      * @param args the command line arguments
