@@ -5,6 +5,9 @@
  */
 package vista;
 
+import control.TreeManager;
+import java.util.ArrayList;
+
 /**
  *
  * @author Ronny
@@ -16,6 +19,7 @@ public class Query_1 extends javax.swing.JFrame {
      */
     public Query_1() {
         initComponents();
+        
     }
 
     /**
@@ -53,6 +57,11 @@ public class Query_1 extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txtArea_links);
 
         btn_buscar.setText("Buscar");
+        btn_buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,6 +102,20 @@ public class Query_1 extends javax.swing.JFrame {
     private void txt_palabraABuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_palabraABuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_palabraABuscarActionPerformed
+
+    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
+        txtArea_links.setText("");
+        ArrayList<String> listaLinks = TreeManager.getInstance().buscarLinks(txt_palabraABuscar.getText().toLowerCase());
+        if (listaLinks != null) {
+            for (String link : listaLinks) {
+            txtArea_links.append(link + "\n");
+            }
+        }else{
+            txtArea_links.append("No se encontraron links.");
+        }
+        
+        
+    }//GEN-LAST:event_btn_buscarActionPerformed
 
     /**
      * @param args the command line arguments

@@ -19,4 +19,5 @@ public interface IConstants {
     public static String ESPACIO = " ";
     public static String TAG_HIPERVINCULO = "a";
     public static String TAG_LINK = "href";
+    public static int TOP_CINCO = 5;
 }

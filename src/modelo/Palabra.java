@@ -11,10 +11,22 @@ import java.util.Objects;
 public class Palabra implements Comparable<Palabra>{
     private String palabra;
     private ArrayList<String> listaLinks;
+    private int cantidadRepeticiones;
 
     public Palabra(String palabra) {
         this.palabra = palabra;
         this.listaLinks = new ArrayList<>();
+        this.cantidadRepeticiones = 0;
+    }
+
+    public int getCantidadRepeticiones() {
+        return cantidadRepeticiones;
+    }
+    
+    
+    
+    public void aumentarCantidadRepeticiones(){
+        this.cantidadRepeticiones++;
     }
 
     public String getPalabra() {

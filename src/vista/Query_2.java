@@ -5,6 +5,10 @@
  */
 package vista;
 
+import control.TreeManager;
+import java.util.ArrayList;
+import modelo.Palabra;
+
 /**
  *
  * @author Ronny
@@ -60,6 +64,11 @@ public class Query_2 extends javax.swing.JFrame {
         lbl_ingreseElRangoABuscar.setText("Ingrese el rango a buscar");
 
         btn_buscar.setText("Buscar");
+        btn_buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,6 +120,18 @@ public class Query_2 extends javax.swing.JFrame {
     private void txt_minimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_minimoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_minimoActionPerformed
+
+    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
+        txtArea_links.setText("");
+        
+        ArrayList<Palabra> listaPalabras = TreeManager.getInstance().buscarRango(txt_minimo.getText(), txt_maximo.getText());
+        
+        for (Palabra palabra : listaPalabras) {
+            txtArea_links.append(palabra.getCantidadRepeticiones() + " " + palabra.getPalabra() + " " + palabra.getListaLinks().get(0) + "\n");
+        }
+        
+ 
+    }//GEN-LAST:event_btn_buscarActionPerformed
 
     /**
      * @param args the command line arguments

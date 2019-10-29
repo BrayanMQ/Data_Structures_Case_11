@@ -28,7 +28,22 @@ public class ArbolAVL <T extends Comparable<T>, E extends Comparable<E>>{
             return null;   // No se encontró coincidencia alguna
         }
     
-
+     /*
+     * Método que encuentra el mayor dato contenido en el árbol AVL
+     */
+    public Nodo<T, E> findMax( ){
+        return findMax(root);
+    }
+    
+    private Nodo<T, E> findMax(Nodo<T, E> pNodo){
+            if( pNodo == null ) {
+                return pNodo;
+            }
+            while( pNodo.getRight() != null ) {
+                pNodo = pNodo.getRight();
+            }
+            return pNodo;
+        }
     
     
     public boolean insert(T pLlave, E pElemento){
@@ -139,4 +154,7 @@ public class ArbolAVL <T extends Comparable<T>, E extends Comparable<E>>{
                 printTree( pNodo.right );
             }
     }
+    
+    
+    
 }
