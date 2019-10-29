@@ -1,21 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  *
  * @author Ronny
  */
-public class Palabra {
+public class Palabra implements Comparable<Palabra>{
     private String palabra;
     private ArrayList<String> listaLinks;
 
-    public Palabra(String palabra, ArrayList<String> listaLinks) {
+    public Palabra(String palabra) {
         this.palabra = palabra;
         this.listaLinks = new ArrayList<>();
     }
@@ -27,5 +24,31 @@ public class Palabra {
     public ArrayList<String> getListaLinks() {
         return listaLinks;
     }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Palabra other = (Palabra) obj;
+        if (!Objects.equals(this.palabra, other.palabra)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public int compareTo(Palabra t) {
+        return 1;
+    }
+    
+    
     
 }
